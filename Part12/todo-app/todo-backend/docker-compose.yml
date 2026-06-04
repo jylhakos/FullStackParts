@@ -1,0 +1,18 @@
+# $ docker-compose.yml
+# $ npm install nodemon --save-dev
+# $ npm install express --save
+# $ docker-compose -f docker-compose.yml up --build
+# $ docker network create local_docker_network --subnet 10.0.1.0/24
+
+version: '3.8'
+
+networks:
+  default:
+    external:
+      name: local_docker_network
+services:
+  app:
+    image: todo-backend
+    build: .
+    ports:
+      - 3000:3000

@@ -1,0 +1,33 @@
+# docker-compose.dev.yml
+# $ npm install
+# $ docker-compose -f docker-compose.dev.yml down --volumes
+# $ docker-compose -f docker-compose.dev.yml up --build
+# $ docker-compose run debug-helper wget -O - http://todo-frontend-dev:3001
+# http://localhost:3001/
+
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8088:80
+    container_name: reverse-proxy-frontend
+  app:
+    image: todo-frontend-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3001:3001
+    expose:
+      - "3001"
+    environment:
+      - PORT=3001
+    container_name: todo-frontend-dev
+  debug-helper:
+    image: busybox
