@@ -1,0 +1,60 @@
+{
+  "name": "phonebook",
+  "version": "1.0.0",
+  "description": "Part 11.21",
+  "main": "main.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.1",
+    "mongoose-unique-validator": "^2.0.3",
+    "nodemon": "^2.0.7",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-plugin-react": "^7.26.1"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "build": "react-scripts build",
+    "dev": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint './**/*.{js,jsx}'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jylhakos/Part11.21.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jylhakos/Part11.21.git/issues"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+dist/
+node_modules/
+process.env
+.env
+.env.local
+.env.development.local
